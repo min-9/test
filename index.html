@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+
+      * {
+        font-family: 'Nanum Gothic Coding', monospace;
+      }
+
+      body {
+        display: flex;
+        font-size: 1.5rem;
+        flex-direction: column;
+        padding: 2rem;
+      }
+
+      hr {
+        margin: 0;
+        margin-bottom: 2rem;
+      }
+
+      main {
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+
+      code {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 500;
+        padding: 0.2rem 0.3rem;
+        background-color: #eceaea;
+        border-radius: 0.25rem;
+      }
+
+      table {
+        width: 50%;
+      }
+
+      table * {
+        padding: 1rem;
+      }
+
+      table *:not(caption) {
+        border: 1px solid #000;
+      }
+    </style>
+    <title>모던웹3주차</title>
+  </head>
+  <body>
+    <h1>이미지 삽입</h1>
+    <hr />
+    <div style="display: flex">
+      <img title="사과" height="200" src="media/apple.png" alt="apple" />
+      <img title="Zustand" width="200" src="zustand.png" alt="zustand" />
+    </div>
+    <h1>
+      <code>&lt;ol&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;dl&gt;</code>
+    </h1>
+    <hr />
+    <div style="padding: 2rem">
+      <h2>ol (ordered list)</h2>
+      <ol>
+        <li>첫번째</li>
+        <li>두번째</li>
+        <li>세번째</li>
+      </ol>
+      <h2>ul (unordered list)</h2>
+      <ul>
+        <li>첫번째</li>
+        <li>두번째</li>
+        <li>세번째</li>
+      </ul>
+      <h2>dl (definition list)</h2>
+      <dl>
+        <dt><b>HTML</b></dt>
+        <dd>하이퍼텍스트 마크업 언어</dd>
+        <dt><b>CSS</b></dt>
+        <dd>스타일시트 언어</dd>
+        <dt><b>JS</b></dt>
+        <dd>웹을 위한 프로그래밍 언어</dd>
+      </dl>
+    </div>
+    <h1>테이블</h1>
+    <hr />
+    <div style="padding: 2rem">
+      <table style="border-collapse: collapse">
+        <caption>
+          1학기 성적
+        </caption>
+        <thead>
+          <th>이름</th>
+          <th>HTML</th>
+          <th>CSS</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>황기태</td>
+            <td>80</td>
+            <td>70</td>
+          </tr>
+          <tr>
+            <td>이재문</td>
+            <td>95</td>
+            <td>99</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <td>합계</td>
+          <td>175</td>
+          <td>169</td>
+        </tfoot>
+      </table>
+    </div>
+    <h1>링크</h1>
+    <hr />
+    <div style="padding: 2rem">
+      <ul>
+        <li>
+          <a target="_blank" href="https://www.naver.com">네이버</a>
+        </li>
+        <li>
+          <a href="https://www.daum.net">다음</a>
+        </li>
+      </ul>
+    </div>
+    <h1>&lt;a&gt; 태그 활용</h1>
+    <hr />
+    <div style="padding: 2rem">
+      <ul>
+        <li><a href="#love">Love Letters</a></li>
+        <li><a href="#all">Can't Help Falling in Love</a></li>
+      </ul>
+      <div style="display: flex; flex-direction: column; gap: 60rem">
+        <p>
+          <b id="love">Love Letters</b> <br />
+          My first movie, ladies and gentlemen Love me tender, love me long
+          Never let me go You have made my dreams come true And I love you so
+          Love me tender, love me true All my dreams fulfill, pull a chord, Bill
+          For my darlin', I love you And I always will Love me tender, love me
+          dear Tell me you are mine I'll be yours through all the years 'Til the
+          end of time Love me tender, love me true All my dreams fulfill For my
+          darlin', I love you, I'll be up in a minute, baby And I always will
+          Thank you Thank you very much
+        </p>
+        <p>
+          <b id="all">Can't Help Falling in Love</b> <br />
+          Wise men say Only fools rush in But I can't help falling in love with
+          you Shall I stay? Would it be a sin If I can't help falling in love
+          with you? Like a river flows Surely to the sea Darling, so it goes
+          Some things are meant to be Take my hand Take my whole life, too For I
+          can't help falling in love with you Like a river flows Surely to the
+          sea Darling, so it goes Some things are meant to be Take my hand Take
+          my whole life, too For I can't help falling in love with you For I
+          can't help falling in love with you
+        </p>
+      </div>
+    </div>
+    <h1>인라인 프레임</h1>
+    <hr />
+    <div style="padding: 2rem">
+      <iframe
+        src="iframe1.html"
+        width="720"
+        height="405"
+        frameborder="0"
+        name="left"
+      ></iframe>
+      <iframe
+        src="iframe2.html"
+        width="720"
+        height="405"
+        frameborder="0"
+        name="right"
+      ></iframe>
+      <iframe
+        width="720"
+        height="405"
+        src="https://www.youtube.com/embed/9bZkp7q19f0"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <iframe
+        width="720"
+        height="405"
+        src="https://www.youtube.com/embed/9bZkp7q19f0"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </body>
+</html>
